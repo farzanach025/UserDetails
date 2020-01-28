@@ -1,48 +1,25 @@
 <script>
-async function drawDiamond(number) {
-    if (isNaN(number)) {
 
-    }
-    else if (number <= 0) {
 
-    }
-    else if (number % 2 === 0) {
 
-    }
-    else {
-        var space = 1;
-		var space = number -1;
-		
-		 for (j = 1; j <= number; j++) 
-        {
-            for (i = 1; i <= space; i++) 
-            {
-                document.write('&nbsp;&nbsp;');
-            }
-            space--;
-            for (i = 1; i <= 2 * j - 1; i++) 
-            {
-                document.write("*");                
-            }
-				document.write("<br>");
-				
-        }
-        space = 1;
-        for (j = 1; j <= number - 1; j++) 
-        {
-            for (i = 1; i <= space; i++) 
-            {
-			document.write('&nbsp;&nbsp;');
-            }
-            space++;
-            for (i = 1; i <= 2 * (number - j) - 1; i++) 
-            {
-                document.write("*");
-            }
-			document.write("<br>");
-        }
-      
-    }
+var rows=15;
+function spacing(rows,i){
+for(var k=1; k<=2 * ( rows-i ); k++) {document.write("&nbsp;");}
+};
+
+for(var i=1;i<=rows;i=i+2)
+{
+	spacing(rows, i);
+	for(var j=1;j<=i;j++) {document.write("*&nbsp;&nbsp;");}
+document.write("<br/>");
 }
-drawDiamond(11);
+
+for(var i=rows-2;i>=1;i=i-2)
+{
+	spacing(rows, i);
+	for(var j=i;j>=1;j--) {document.write("*&nbsp;&nbsp;");}
+document.write("<br/>");
+}
+
 </script>
+
