@@ -7,13 +7,9 @@
             function printDiamond() {
                 document.getElementById("result").innerHTML = "";
                 var rows = document.getElementById("limit").value;
-                alert(rows);
-
-                if (rows < 2 || rows > 100) {
-                    alert('Please enter value between 1 and 101');
-                    return;
-                }
                 
+                if ( rows % 2==1) {
+                    
 function spacing(rows,i){
 for(var k=1; k<=2 * ( rows-i ); k++) {document.write("&nbsp;");}
 };
@@ -32,8 +28,13 @@ for(var i=rows-2;i>=1;i=i-2)
 document.write("<br/>");
 }
                
-                alert('Done!');
+                alert('Here you go!');
             }
+            else{
+            alert("Your input shouldn't be a character or a negative number or an even number");
+            }
+            
+}
         </script>
     </head>
     <body>
