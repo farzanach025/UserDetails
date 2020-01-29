@@ -6,27 +6,28 @@
         <script>
             function printDiamond() {
                 document.getElementById("result").innerHTML = "";
-                var rows = document.getElementById("limit").value;
+                var rows = document.getElementById("limit").value; //here we take the number we entered
                 
-                if ( rows % 2==1) {
+                if ( rows % 2==1) { // accept all odd inputs
                     
-function spacing(rows,i){
-for(var k=1; k<=2 * ( rows-i ); k++) {document.write("&nbsp;");}
-};
+                    function spacing(rows,i){     // for spacing
+                    for(var k=1; k<=2 * ( rows-i ); k++) 
+                    {document.write("&nbsp;");}
+                    };
 
-for(var i=1;i<=rows;i=i+2)
-{
-	spacing(rows, i);
-	for(var j=1;j<=i;j++) {document.write("*&nbsp;&nbsp;");}
-document.write("<br/>");
-}
+                    for(var i=1;i<=rows;i=i+2)  // for stars increment
+                    {
+                        spacing(rows, i);
+                        for(var j=1;j<=i;j++) {document.write("*&nbsp;&nbsp;");}
+                    document.write("<br/>");
+                    }
 
-for(var i=rows-2;i>=1;i=i-2)
-{
-	spacing(rows, i);
-	for(var j=i;j>=1;j--) {document.write("*&nbsp;&nbsp;");}
-document.write("<br/>");
-}
+                    for(var i=rows-2;i>=1;i=i-2)  // for star decrement
+                    {
+                        spacing(rows, i);
+                        for(var j=i;j>=1;j--) {document.write("*&nbsp;&nbsp;");}
+                    document.write("<br/>");
+                    }
                
                 alert('Here you go!');
             }
