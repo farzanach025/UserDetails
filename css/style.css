@@ -39,7 +39,7 @@
 #test
 {
 	color: #515050;
-	width: 300%;
+	width: 300px;
 	margin: 10px;
 	padding: 15px;
 	border-radius: 20px;
@@ -68,9 +68,12 @@ hr
 	padding-left: 20px;
 }
 
-@media screen and (max-width: 600px) {
-	.topnav a {
-	  float: none;
-	  width: 100%;
+@media screen and (max-width: 600px ) {
+	#test  {
+		color: #515050;
+		width: 100px;
+		text-align: left;
+		float: left;
+		font-size: 12px;
 	}
   }
